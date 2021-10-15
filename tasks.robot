@@ -13,6 +13,7 @@ Library     RPA.FileSystem
 Library     RPA.Archive
 Library     RPA.Dialogs
 Library     RPA.Robocorp.Vault
+Library     RPA.RobotLogListener
 
 
 *** Variables ***
@@ -56,6 +57,7 @@ Try to Order
 
 *** Keyword ***
 Submit The Order
+    Mute Run On Failure     Try to Order
     Wait Until Keyword Succeeds
     ...    ${GLOBAL_RETRY_AMOUNT}
     ...    ${GLOBAL_RETRY_INTERVAL}
